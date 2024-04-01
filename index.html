@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+    <!-- icons -->
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"/>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="Logo branco Mike">
+        </a>
+        <ul class="navbar">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Snkrs</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#"><i class="ri-search-line"></i></a>
+            <a href="#"><i class="ri-shopping-cart-2-line"></i></a>
+            <div class="bx bx-menu" id="menu-icon">
+
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="hero__img" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="img/hero1.png" alt="Tênis do tipo esporte, com as cores rosa pink e preto da marca Nike.">
+            </div>
+            <div class="hero__text">
+                <h1 data-aos="fade-right" data-aos-duration="1500">Nike Air<br>Pure Wolf</h1>
+                <p data-aos="fade-down-right" data-aos-duration="1400" >Avançar rápido. Rebobinar. Não importa – este tênis leva o retrô para o futuro. O V2K remasteriza tudo o que você adora no Vomero em um visual retirado diretamente de um catálogo de corrida dos primeiros anos.</p>
+                <h5 data-aos="zoom-in" data-aos-duration="1400">R$ 890,00</h5>
+                <div class="hero__btn" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="200">
+                    <a href="#" class="btn">Adicionar ao carrinho</a>
+                    <a href="#" class="btn2">Mais infos</a>
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="100">
+                <img src="img/p1.png" onclick="slider('img/hero1.png')" alt="Tênis do tipo esporte, com dois tons de marrom da marca Nike.">
+            </div>
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1250" data-aos-delay="150">
+                <img src="img/p2.png" onclick="slider('img/hero2.png')" alt="Tênis do tipo esporte, com as cores prata e cinza da marca Nike.">
+            </div>
+            <div class="box" data-aos="zoom-out-right" data-aos-duration="1100" data-aos-delay="200">
+                <img src="img/p3.png" onclick="slider('img/hero1.png')" alt="Tênis do tipo esporte, com dois tons de cinza e vermelho da marca Nike.">
+            </div>
+        </aside>
+
+        <a href="#main" class="scroll" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <i class="ri-scroll-to-bottom-line"></i>
+        </a>
+
+    </main>
+    <script>
+        function slider(anything){
+            document.querySelector('.hero__img img').src = anything;
+        }
+
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('-open');
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        offset: 1
+    });
+    </script>
+</body>
+</html>
